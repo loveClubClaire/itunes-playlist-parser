@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C07F1A801C27662200CF27EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07F1A7F1C27662200CF27EA /* AppDelegate.swift */; };
+		C07F1A821C27662200CF27EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07F1A811C27662200CF27EA /* Assets.xcassets */; };
+		C07F1A851C27662200CF27EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07F1A831C27662200CF27EA /* MainMenu.xib */; };
+		C07F1A901C27662200CF27EA /* PlaylistParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07F1A8F1C27662200CF27EA /* PlaylistParserTests.swift */; };
+		C07F1A9B1C27662200CF27EA /* PlaylistParserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07F1A9A1C27662200CF27EA /* PlaylistParserUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C07F1A8C1C27662200CF27EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C07F1A741C27662200CF27EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C07F1A7B1C27662200CF27EA;
+			remoteInfo = PlaylistParser;
+		};
+		C07F1A971C27662200CF27EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C07F1A741C27662200CF27EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C07F1A7B1C27662200CF27EA;
+			remoteInfo = PlaylistParser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C07F1A7C1C27662200CF27EA /* PlaylistParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaylistParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C07F1A7F1C27662200CF27EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C07F1A811C27662200CF27EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C07F1A841C27662200CF27EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C07F1A861C27662200CF27EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C07F1A8B1C27662200CF27EA /* PlaylistParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaylistParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C07F1A8F1C27662200CF27EA /* PlaylistParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistParserTests.swift; sourceTree = "<group>"; };
+		C07F1A911C27662200CF27EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C07F1A961C27662200CF27EA /* PlaylistParserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaylistParserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C07F1A9A1C27662200CF27EA /* PlaylistParserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistParserUITests.swift; sourceTree = "<group>"; };
+		C07F1A9C1C27662200CF27EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C07F1A791C27662200CF27EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C07F1A881C27662200CF27EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C07F1A931C27662200CF27EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C07F1A731C27662200CF27EA = {
+			isa = PBXGroup;
+			children = (
+				C07F1A7E1C27662200CF27EA /* PlaylistParser */,
+				C07F1A8E1C27662200CF27EA /* PlaylistParserTests */,
+				C07F1A991C27662200CF27EA /* PlaylistParserUITests */,
+				C07F1A7D1C27662200CF27EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C07F1A7D1C27662200CF27EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C07F1A7C1C27662200CF27EA /* PlaylistParser.app */,
+				C07F1A8B1C27662200CF27EA /* PlaylistParserTests.xctest */,
+				C07F1A961C27662200CF27EA /* PlaylistParserUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C07F1A7E1C27662200CF27EA /* PlaylistParser */ = {
+			isa = PBXGroup;
+			children = (
+				C07F1A7F1C27662200CF27EA /* AppDelegate.swift */,
+				C07F1A811C27662200CF27EA /* Assets.xcassets */,
+				C07F1A831C27662200CF27EA /* MainMenu.xib */,
+				C07F1A861C27662200CF27EA /* Info.plist */,
+			);
+			path = PlaylistParser;
+			sourceTree = "<group>";
+		};
+		C07F1A8E1C27662200CF27EA /* PlaylistParserTests */ = {
+			isa = PBXGroup;
+			children = (
+				C07F1A8F1C27662200CF27EA /* PlaylistParserTests.swift */,
+				C07F1A911C27662200CF27EA /* Info.plist */,
+			);
+			path = PlaylistParserTests;
+			sourceTree = "<group>";
+		};
+		C07F1A991C27662200CF27EA /* PlaylistParserUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C07F1A9A1C27662200CF27EA /* PlaylistParserUITests.swift */,
+				C07F1A9C1C27662200CF27EA /* Info.plist */,
+			);
+			path = PlaylistParserUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C07F1A7B1C27662200CF27EA /* PlaylistParser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C07F1A9F1C27662200CF27EA /* Build configuration list for PBXNativeTarget "PlaylistParser" */;
+			buildPhases = (
+				C07F1A781C27662200CF27EA /* Sources */,
+				C07F1A791C27662200CF27EA /* Frameworks */,
+				C07F1A7A1C27662200CF27EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlaylistParser;
+			productName = PlaylistParser;
+			productReference = C07F1A7C1C27662200CF27EA /* PlaylistParser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C07F1A8A1C27662200CF27EA /* PlaylistParserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C07F1AA21C27662200CF27EA /* Build configuration list for PBXNativeTarget "PlaylistParserTests" */;
+			buildPhases = (
+				C07F1A871C27662200CF27EA /* Sources */,
+				C07F1A881C27662200CF27EA /* Frameworks */,
+				C07F1A891C27662200CF27EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C07F1A8D1C27662200CF27EA /* PBXTargetDependency */,
+			);
+			name = PlaylistParserTests;
+			productName = PlaylistParserTests;
+			productReference = C07F1A8B1C27662200CF27EA /* PlaylistParserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C07F1A951C27662200CF27EA /* PlaylistParserUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C07F1AA51C27662200CF27EA /* Build configuration list for PBXNativeTarget "PlaylistParserUITests" */;
+			buildPhases = (
+				C07F1A921C27662200CF27EA /* Sources */,
+				C07F1A931C27662200CF27EA /* Frameworks */,
+				C07F1A941C27662200CF27EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C07F1A981C27662200CF27EA /* PBXTargetDependency */,
+			);
+			name = PlaylistParserUITests;
+			productName = PlaylistParserUITests;
+			productReference = C07F1A961C27662200CF27EA /* PlaylistParserUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C07F1A741C27662200CF27EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = WCNURadio;
+				TargetAttributes = {
+					C07F1A7B1C27662200CF27EA = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					C07F1A8A1C27662200CF27EA = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C07F1A7B1C27662200CF27EA;
+					};
+					C07F1A951C27662200CF27EA = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C07F1A7B1C27662200CF27EA;
+					};
+				};
+			};
+			buildConfigurationList = C07F1A771C27662200CF27EA /* Build configuration list for PBXProject "PlaylistParser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C07F1A731C27662200CF27EA;
+			productRefGroup = C07F1A7D1C27662200CF27EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C07F1A7B1C27662200CF27EA /* PlaylistParser */,
+				C07F1A8A1C27662200CF27EA /* PlaylistParserTests */,
+				C07F1A951C27662200CF27EA /* PlaylistParserUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C07F1A7A1C27662200CF27EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C07F1A821C27662200CF27EA /* Assets.xcassets in Resources */,
+				C07F1A851C27662200CF27EA /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C07F1A891C27662200CF27EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C07F1A941C27662200CF27EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C07F1A781C27662200CF27EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C07F1A801C27662200CF27EA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C07F1A871C27662200CF27EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C07F1A901C27662200CF27EA /* PlaylistParserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C07F1A921C27662200CF27EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C07F1A9B1C27662200CF27EA /* PlaylistParserUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C07F1A8D1C27662200CF27EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C07F1A7B1C27662200CF27EA /* PlaylistParser */;
+			targetProxy = C07F1A8C1C27662200CF27EA /* PBXContainerItemProxy */;
+		};
+		C07F1A981C27662200CF27EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C07F1A7B1C27662200CF27EA /* PlaylistParser */;
+			targetProxy = C07F1A971C27662200CF27EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C07F1A831C27662200CF27EA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C07F1A841C27662200CF27EA /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C07F1A9D1C27662200CF27EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C07F1A9E1C27662200CF27EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C07F1AA01C27662200CF27EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PlaylistParser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Zach.PlaylistParser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C07F1AA11C27662200CF27EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PlaylistParser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Zach.PlaylistParser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C07F1AA31C27662200CF27EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PlaylistParserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Zach.PlaylistParserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlaylistParser.app/Contents/MacOS/PlaylistParser";
+			};
+			name = Debug;
+		};
+		C07F1AA41C27662200CF27EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PlaylistParserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Zach.PlaylistParserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlaylistParser.app/Contents/MacOS/PlaylistParser";
+			};
+			name = Release;
+		};
+		C07F1AA61C27662200CF27EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PlaylistParserUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Zach.PlaylistParserUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PlaylistParser;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C07F1AA71C27662200CF27EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PlaylistParserUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Zach.PlaylistParserUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PlaylistParser;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C07F1A771C27662200CF27EA /* Build configuration list for PBXProject "PlaylistParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C07F1A9D1C27662200CF27EA /* Debug */,
+				C07F1A9E1C27662200CF27EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C07F1A9F1C27662200CF27EA /* Build configuration list for PBXNativeTarget "PlaylistParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C07F1AA01C27662200CF27EA /* Debug */,
+				C07F1AA11C27662200CF27EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C07F1AA21C27662200CF27EA /* Build configuration list for PBXNativeTarget "PlaylistParserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C07F1AA31C27662200CF27EA /* Debug */,
+				C07F1AA41C27662200CF27EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C07F1AA51C27662200CF27EA /* Build configuration list for PBXNativeTarget "PlaylistParserUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C07F1AA61C27662200CF27EA /* Debug */,
+				C07F1AA71C27662200CF27EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C07F1A741C27662200CF27EA /* Project object */;
+}
