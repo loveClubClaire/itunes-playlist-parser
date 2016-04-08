@@ -24,7 +24,8 @@ class ViewLoading: NSObject{
     func makeDisabled(){
         var subviews = mainWindow.contentView?.subviews
         let count = subviews?.count
-        for(var i = 0; i < count; i++){
+        
+        for _ in 0...count!-1{
             let item = subviews?.popLast()
             if(item!.isKindOfClass(NSButton)){
                 (item as! NSButton).enabled = false
@@ -38,7 +39,8 @@ class ViewLoading: NSObject{
     func makeEnabled(){
         var subviews = mainWindow.contentView?.subviews
         let count = subviews?.count
-        for(var i = 0; i < count; i++){
+        
+        for _ in 0...count!-1{
             let item = subviews?.popLast()
             if(item!.isKindOfClass(NSButton)){
                 (item as! NSButton).enabled = true
