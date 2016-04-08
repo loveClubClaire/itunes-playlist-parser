@@ -24,35 +24,37 @@ class iTunesXMLGenerator: NSObject{
         let fileContentArray = fileContent?.componentsSeparatedByString("\n")
         
         //Generate the header of the XML file by ripping it from one of the given XML files
-        for(var i = 0; i < fileContentArray?.count; i++){
-            finalXMLFile = (finalXMLFile as String) + (fileContentArray![i] as String) + "\n"
-            if(fileContentArray![i] == "\t<dict>"){
-                i = (fileContentArray?.count)!+1
+        for aFileContent in fileContentArray!{
+            finalXMLFile = (finalXMLFile as String) + (aFileContent as String) + "\n"
+            if(aFileContent == "\t<dict>"){
+                break;
             }
         }
-     
+        
         let masterDictionaryKeys = masterDictionary.allKeys
-        print(masterDictionaryKeys.count)
-        for(var i = 0; i < masterDictionaryKeys.count; i++){
-            let bool = masterDictionary.objectForKey(masterDictionaryKeys[i])
+        
+        for aMasterDictionaryKey in masterDictionaryKeys{
+            let bool = masterDictionary.objectForKey(aMasterDictionaryKey)
             if(bool != nil){
-            if(bool!.isNotEqualTo(NSNull)){
-                //add key
-                finalXMLFile = (finalXMLFile as String) + "\t\t<key>" + (masterDictionaryKeys[i] as! String) + "</key>\n\t\t\t<dict>\n"
-                let songKeys = masterDictionary.objectForKey(masterDictionaryKeys[i])?.allKeys
-                let songDictionary = masterDictionary.objectForKey(masterDictionaryKeys[i])
-                for(var j = 0; j < songKeys?.count; j++){
-                    //add song
-                    finalXMLFile = (finalXMLFile as String) + "\t\t\t\t<key>" + (songKeys![j] as String) + "</key>"
-                    let value = songDictionary?.objectForKey(songKeys![j]) as! NSString
-                    let tag = getFlagType(value)
-                    finalXMLFile = (finalXMLFile as String) + "<" + (tag as String) + ">" + (value as String)
-                    finalXMLFile = (finalXMLFile as String) + "</" + (tag as String) + ">" + "\n"
+                if(bool!.isNotEqualTo(NSNull)){
+                    //add key
+                    finalXMLFile = (finalXMLFile as String) + "\t\t<key>" + (aMasterDictionaryKey as! String) + "</key>\n\t\t\t<dict>\n"
+                    let songKeys = masterDictionary.objectForKey(aMasterDictionaryKey)?.allKeys
+                    let songDictionary = masterDictionary.objectForKey(aMasterDictionaryKey)
+                    
+                    for aSongKey in songKeys!{
+                        //add song
+                        finalXMLFile = (finalXMLFile as String) + "\t\t\t\t<key>" + (aSongKey as! String) + "</key>"
+                        let value = songDictionary?.objectForKey(aSongKey) as! NSString
+                        let tag = getFlagType(value)
+                        finalXMLFile = (finalXMLFile as String) + "<" + (tag as String) + ">" + (value as String)
+                        finalXMLFile = (finalXMLFile as String) + "</" + (tag as String) + ">" + "\n"
+                    }
+                    finalXMLFile = (finalXMLFile as String) + "\t\t\t</dict>\n"
                 }
-                finalXMLFile = (finalXMLFile as String) + "\t\t\t</dict>\n"
             }
         }
-        }
+
         finalXMLFile = (finalXMLFile as String) + "\t</dict>\n"
         finalXMLFile = (finalXMLFile as String) + "\t<key>Playlists</key>\n"
         finalXMLFile = (finalXMLFile as String) + "\t<array>\n\t\t<dict>\n"
@@ -61,8 +63,8 @@ class iTunesXMLGenerator: NSObject{
         finalXMLFile = (finalXMLFile as String) + "\t\t\t<key>All Items</key><true/>\n"
         finalXMLFile = (finalXMLFile as String) + "\t\t\t<key>Playlist Items</key>\n\t\t\t<array>\n"
         
-        for(var i = 0; i < masterDictionaryKeys.count; i++){
-            finalXMLFile = (finalXMLFile as String) + "\t\t\t\t<dict>\n\t\t\t\t\t<key>Track ID</key><integer>" + (masterDictionaryKeys[i] as! String) + "</integer>\n\t\t\t\t</dict>\n"
+        for aMasterDictionaryKey in masterDictionaryKeys{
+            finalXMLFile = (finalXMLFile as String) + "\t\t\t\t<dict>\n\t\t\t\t\t<key>Track ID</key><integer>" + (aMasterDictionaryKey as! String) + "</integer>\n\t\t\t\t</dict>\n"
         }
         
         finalXMLFile = (finalXMLFile as String) + "\t\t\t</array>\n\t\t</dict>\n\t</array>\n</dict>\n</plist>"
@@ -71,9 +73,10 @@ class iTunesXMLGenerator: NSObject{
         filepath.removeLast()
         filepath.append("GeneratedPlaylist.xml")
         var newFilepath = ""
-        for(var i = 0; i < filepath.count; i++){
-            newFilepath = (newFilepath as String) + filepath[i]
-            if(i + 1 < filepath.count){
+        
+        for(index,aFilepath) in filepath.enumerate(){
+            newFilepath = (newFilepath as String) + aFilepath
+            if(index + 1 < filepath.count){
                 newFilepath = (newFilepath as String) + "/"
             }
         }
