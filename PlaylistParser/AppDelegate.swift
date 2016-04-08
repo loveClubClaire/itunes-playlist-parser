@@ -106,7 +106,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSXMLParserDelegate{
 
         var allFileResults = [NSMutableDictionary]()
             
-        //Parse all the files. So for each URL, parse out all its values and add it to the allFileResults dictionary
+        //Parse all the files. So for each URL, its values are parsed and saved to the NSMutableDictionary bestDictionary. Then that URL's bestDictionary is appended to the allFileResults array of dictionarys. This leaves us with an array of dictionaries, each containing the parsed data from one of the selected files.
         for url in urlArray{
             let parser = NSXMLParser(contentsOfURL:(url) as! NSURL)!
             let bestDictionary = NSMutableDictionary()
@@ -115,7 +115,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSXMLParserDelegate{
             parser.parse()
             allFileResults.append(bestDictionary)
         }
-            
+        //Ultimently this logic block is converting an array of dictionaries (allFileResults) into a single dictionary containing all of the values from allFileResults. No duplicates will exist cause its a dictionary.
         let masterDictionary = allFileResults.first
         for fileResult in allFileResults{
             let keys = fileResult.allKeys
@@ -126,6 +126,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSXMLParserDelegate{
             }
         }
 
+        //Adds the values from this threads masterDictionary to the dictionary it was passed. 
         dispatch_async(dispatch_get_main_queue()) {
             aMasterDictionary.addEntriesFromDictionary(masterDictionary! as [NSObject : AnyObject])
             dispatch_group_leave(dispatchGroup)
@@ -180,7 +181,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSXMLParserDelegate{
                 
                 
             }
-            //update some UI
             dispatch_async(dispatch_get_main_queue()) {
                 self.parseFileProgress.orderOut(self)
                 print("Thread Completed in thread")
