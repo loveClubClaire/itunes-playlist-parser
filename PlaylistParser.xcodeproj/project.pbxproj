@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C06B06B91C418C0900F126AA /* ViewLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06B06B81C418C0900F126AA /* ViewLoading.swift */; };
 		C07F1A801C27662200CF27EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07F1A7F1C27662200CF27EA /* AppDelegate.swift */; };
 		C07F1A821C27662200CF27EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07F1A811C27662200CF27EA /* Assets.xcassets */; };
 		C07F1A851C27662200CF27EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07F1A831C27662200CF27EA /* MainMenu.xib */; };
 		C07F1A901C27662200CF27EA /* PlaylistParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07F1A8F1C27662200CF27EA /* PlaylistParserTests.swift */; };
 		C07F1A9B1C27662200CF27EA /* PlaylistParserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07F1A9A1C27662200CF27EA /* PlaylistParserUITests.swift */; };
+		C07F1AAC1C27BDB600CF27EA /* iTunesXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07F1AAB1C27BDB600CF27EA /* iTunesXMLParser.swift */; };
+		C07F1AAE1C286F6100CF27EA /* iTunesXMLGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07F1AAD1C286F6100CF27EA /* iTunesXMLGenerator.swift */; };
+		C07F1AB41C28A03D00CF27EA /* 2000px-Spain_traffic_signal_p4.icns in Resources */ = {isa = PBXBuildFile; fileRef = C07F1AB31C28A03D00CF27EA /* 2000px-Spain_traffic_signal_p4.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C06B06B81C418C0900F126AA /* ViewLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLoading.swift; sourceTree = "<group>"; };
 		C07F1A7C1C27662200CF27EA /* PlaylistParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaylistParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07F1A7F1C27662200CF27EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C07F1A811C27662200CF27EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +48,9 @@
 		C07F1A961C27662200CF27EA /* PlaylistParserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaylistParserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07F1A9A1C27662200CF27EA /* PlaylistParserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistParserUITests.swift; sourceTree = "<group>"; };
 		C07F1A9C1C27662200CF27EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C07F1AAB1C27BDB600CF27EA /* iTunesXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iTunesXMLParser.swift; path = ../iTunesXMLParser.swift; sourceTree = "<group>"; };
+		C07F1AAD1C286F6100CF27EA /* iTunesXMLGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesXMLGenerator.swift; sourceTree = "<group>"; };
+		C07F1AB31C28A03D00CF27EA /* 2000px-Spain_traffic_signal_p4.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "2000px-Spain_traffic_signal_p4.icns"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				C07F1A7F1C27662200CF27EA /* AppDelegate.swift */,
+				C06B06B81C418C0900F126AA /* ViewLoading.swift */,
+				C07F1AAB1C27BDB600CF27EA /* iTunesXMLParser.swift */,
+				C07F1AAD1C286F6100CF27EA /* iTunesXMLGenerator.swift */,
+				C07F1AB31C28A03D00CF27EA /* 2000px-Spain_traffic_signal_p4.icns */,
 				C07F1A811C27662200CF27EA /* Assets.xcassets */,
 				C07F1A831C27662200CF27EA /* MainMenu.xib */,
 				C07F1A861C27662200CF27EA /* Info.plist */,
@@ -223,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07F1AB41C28A03D00CF27EA /* 2000px-Spain_traffic_signal_p4.icns in Resources */,
 				C07F1A821C27662200CF27EA /* Assets.xcassets in Resources */,
 				C07F1A851C27662200CF27EA /* MainMenu.xib in Resources */,
 			);
@@ -249,7 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07F1AAC1C27BDB600CF27EA /* iTunesXMLParser.swift in Sources */,
+				C06B06B91C418C0900F126AA /* ViewLoading.swift in Sources */,
 				C07F1A801C27662200CF27EA /* AppDelegate.swift in Sources */,
+				C07F1AAE1C286F6100CF27EA /* iTunesXMLGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +487,7 @@
 				C07F1AA11C27662200CF27EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C07F1AA21C27662200CF27EA /* Build configuration list for PBXNativeTarget "PlaylistParserTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +496,7 @@
 				C07F1AA41C27662200CF27EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C07F1AA51C27662200CF27EA /* Build configuration list for PBXNativeTarget "PlaylistParserUITests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +505,7 @@
 				C07F1AA71C27662200CF27EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
