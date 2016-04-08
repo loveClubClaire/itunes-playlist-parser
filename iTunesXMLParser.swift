@@ -100,7 +100,7 @@ class iTunesXMLParser: NSObject, NSXMLParserDelegate{
             dictCount -= 1
             
             if(dictCount == 2){
-                for index in 0.stride(to: dict3Contents.count, by: 2){
+                for index in 1.stride(to: dict3Contents.count, by: 2){
                     dictionary3.setObject(dict3Contents.objectAtIndex(index), forKey: (dict3Contents.objectAtIndex(index-1) as! String) )
                 }
                 allDict3.addObject(dictionary3)

@@ -57,6 +57,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSXMLParserDelegate{
     }
     
     @IBAction func GenerateXMLFile(sender: AnyObject) {
+        //Give user an error if there is not at least one main and one secondary playlist selected
         if(self.buttonOneURLS.count < 1 || self.buttonTwoURLS.count < 1){
             let myPopup: NSAlert = NSAlert()
             myPopup.messageText = "Must Select Files"
