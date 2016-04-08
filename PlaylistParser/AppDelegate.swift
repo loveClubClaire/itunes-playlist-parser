@@ -138,48 +138,50 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSXMLParserDelegate{
         parseFileProgress.makeKeyAndOrderFront(self)
         let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            //NSApp.runModalForWindow(self.parseFileProgress)
             // do some task
             let mainKeys = mainDictionary.allKeys
             let secondaryKeys = secondaryDictionary.allKeys
             self.progressIndicator.maxValue = Double(mainKeys.count * secondaryKeys.count)
-            for(var i = 0; i < mainKeys.count; i++){
-                for(var j = 0; j < secondaryKeys.count; j++){
-                    let mainSong = mainDictionary.objectForKey(mainKeys[i] as! String)
-                    let secondarySong = secondaryDictionary.valueForKey(secondaryKeys[j] as! String)
+            
+            for aMainKey in mainKeys{
+                for (index,aSecondaryKey) in secondaryKeys.enumerate(){
+                    let mainSong = mainDictionary.objectForKey(aMainKey as! String)
+                    let secondarySong = secondaryDictionary.valueForKey(aSecondaryKey as! String)
                     
-                    let bool = mainSong!.valueForKey("Artist"); let bool2 = (secondarySong!.valueForKey("Artist")); let bool3 = mainSong!.valueForKey("Name"); let bool4 = secondarySong!.valueForKey("Name"); let bool5 = mainSong!.valueForKey("Album"); let bool6 = secondarySong!.valueForKey("Album");
+                    let bool = mainSong!.valueForKey("Artist")
+                    let bool2 = secondarySong!.valueForKey("Artist")
+                    let bool3 = mainSong!.valueForKey("Name")
+                    let bool4 = secondarySong!.valueForKey("Name")
+                    let bool5 = mainSong!.valueForKey("Album")
+                    let bool6 = secondarySong!.valueForKey("Album")
                     
                     if(bool != nil && bool2 != nil && bool3 != nil && bool4 != nil && bool5 != nil && bool6 != nil){
                         if( (mainSong!.valueForKey("Artist") as! String).caseInsensitiveCompare((secondarySong!.valueForKey("Artist")) as! String) == NSComparisonResult.OrderedSame){
                             if((mainSong!.valueForKey("Name") as! String).caseInsensitiveCompare((secondarySong!.valueForKey("Name")) as! String) == NSComparisonResult.OrderedSame){
-                                if((mainSong!.valueForKey("Album") as! String).caseInsensitiveCompare((secondarySong!.valueForKey("Album")) as! String) == NSComparisonResult.OrderedSame){
-                                    mainDictionary.removeObjectForKey(mainKeys[i] as! String)
-                                    let delta = Double(secondaryKeys.count - j - 1)
-                                    dispatch_async(dispatch_get_main_queue())
-                                        {self.progressIndicator.incrementBy(delta)}
-                                    j = secondaryKeys.count + 1;
+                                if((mainSong!.valueForKey("Album") as! String).caseInsensitiveCompare((secondarySong!.valueForKey("Album")) as! String) ==
+                                    NSComparisonResult.OrderedSame){
+                                    
+                                    mainDictionary.removeObjectForKey(aMainKey as! String)
+                                    let delta = Double(secondaryKeys.count - index - 1)
+                                    dispatch_async(dispatch_get_main_queue()){self.progressIndicator.incrementBy(delta)}
+                                    break;
                                 }
                             }
-                        }
-                    }
-                    dispatch_async(dispatch_get_main_queue()) {
-                        // update some UI
-                        self.progressIndicator.incrementBy(1.0);
-                    }
                 }
+            }
+            dispatch_async(dispatch_get_main_queue()) {
+                //update some UI
+                self.progressIndicator.incrementBy(1.0);
+            }
+        }
                 
                 
                 
             }
             dispatch_async(dispatch_get_main_queue()) {
-                //NSApp.stopModal()
-                
                 self.parseFileProgress.orderOut(self)
                 print("Thread Completed in thread")
                 dispatch_group_leave(dispatchGroup)
-                
-                
             }
         }
     }
