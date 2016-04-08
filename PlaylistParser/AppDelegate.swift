@@ -3,7 +3,7 @@
 //  PlaylistParser
 //
 //  Created by Zachary Whitten on 12/20/15.
-//  Copyright © 2015 WCNURadio. All rights reserved.
+//  Copyright © 2015 Zachary Whitten. All rights reserved.
 //
 
 import Cocoa
@@ -80,7 +80,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSXMLParserDelegate{
             myClass.makeDisabled()
             
             mergeButtonFiles(buttonOneURLS, aMasterDictionary: &buttonOneDictionary, dispatchGroup: dictionaryGroups)
-            mergeButtonFiles(buttonTwoURLS, aMasterDictionary:  &buttonTwoDictionary, dispatchGroup: dictionaryGroups)
+            mergeButtonFiles(buttonTwoURLS, aMasterDictionary: &buttonTwoDictionary, dispatchGroup: dictionaryGroups)
             
             dispatch_group_notify(dictionaryGroups, dispatch_get_main_queue()) {
             self.mainViewProgressIndicator.stopAnimation(self)
@@ -104,25 +104,27 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSXMLParserDelegate{
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
 
         var allFileResults = [NSMutableDictionary]()
+            
         //Parse all the files
-        for(var i = 0; i < urlArray.count; i++){
-            let parser = NSXMLParser(contentsOfURL:urlArray[i] as! NSURL)!
+        for url in urlArray{
+            let parser = NSXMLParser(contentsOfURL:(url) as! NSURL)!
             let bestDictionary = NSMutableDictionary()
             let myDelegate = iTunesXMLParser(masterDictionary: bestDictionary)
             parser.delegate = myDelegate
             parser.parse()
             allFileResults.append(bestDictionary)
         }
-            let masterDictionary = allFileResults.first
-            for(var i = 1; i < allFileResults.count; i++){
-                var keys = allFileResults[i].allKeys
-                for(var j = 0; j < keys.count; j++){
-                    if(masterDictionary?.valueForKey(keys[j] as! String) == nil){
-                        masterDictionary?.setObject(allFileResults[i].valueForKey(keys[j] as! String)!, forKey: (keys[j] as! String))
-                    }
+            
+        let masterDictionary = allFileResults.first
+        for fileResult in allFileResults{
+            let keys = fileResult.allKeys
+            for key in keys{
+                if(masterDictionary?.valueForKey(key as! String) == nil){
+                    masterDictionary?.setObject(fileResult.valueForKey(key as! String)!, forKey: (key as! String))
                 }
             }
-            
+        }
+
         dispatch_async(dispatch_get_main_queue()) {
             aMasterDictionary.addEntriesFromDictionary(masterDictionary! as [NSObject : AnyObject])
             dispatch_group_leave(dispatchGroup)

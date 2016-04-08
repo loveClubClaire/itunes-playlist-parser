@@ -3,7 +3,7 @@
 //  PlaylistParser
 //
 //  Created by Zachary Whitten on 12/20/15.
-//  Copyright © 2015 WCNURadio. All rights reserved.
+//  Copyright © 2015 Zachary Whitten. All rights reserved.
 //
 
 import Foundation
