@@ -105,7 +105,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSXMLParserDelegate{
 
         var allFileResults = [NSMutableDictionary]()
             
-        //Parse all the files
+        //Parse all the files. So for each URL, parse out all its values and add it to the allFileResults dictionary
         for url in urlArray{
             let parser = NSXMLParser(contentsOfURL:(url) as! NSURL)!
             let bestDictionary = NSMutableDictionary()
@@ -169,8 +169,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSXMLParserDelegate{
                             }
                 }
             }
+            //update some UI
             dispatch_async(dispatch_get_main_queue()) {
-                //update some UI
+                //Update the progress bar by 1
                 self.progressIndicator.incrementBy(1.0);
             }
         }
@@ -178,6 +179,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSXMLParserDelegate{
                 
                 
             }
+            //update some UI
             dispatch_async(dispatch_get_main_queue()) {
                 self.parseFileProgress.orderOut(self)
                 print("Thread Completed in thread")

@@ -41,7 +41,7 @@ class iTunesXMLParser: NSObject, NSXMLParserDelegate{
         //If that opening tag is a "dict" tag, then increnment our dictCount by one
         //This tells us how many dictionary tags deep in we are, because this XML file can have tags of the same name imbeded
         if(elementName == "dict"){
-            dictCount++
+            dictCount += 1
         }
     }
     
@@ -97,11 +97,11 @@ class iTunesXMLParser: NSObject, NSXMLParserDelegate{
     //Gets the value of a closing tag. This function detects which dict tag is being closed and then stores the resulting data into a dictionary
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?){
         if(elementName == "dict"){
-            dictCount--
+            dictCount -= 1
             
             if(dictCount == 2){
-                for(var i = 1; i < dict3Contents.count; i = i + 2){
-                    dictionary3.setObject(dict3Contents.objectAtIndex(i), forKey: (dict3Contents.objectAtIndex(i-1) as! String) )
+                for index in 0.stride(to: dict3Contents.count, by: 2){
+                    dictionary3.setObject(dict3Contents.objectAtIndex(index), forKey: (dict3Contents.objectAtIndex(index-1) as! String) )
                 }
                 allDict3.addObject(dictionary3)
                 dictionary3 = NSMutableDictionary()
@@ -109,8 +109,8 @@ class iTunesXMLParser: NSObject, NSXMLParserDelegate{
             }
             
             if(dictCount == 1 && halfWay == false){
-                for(var i = 0; i < allDict3.count; i++){
-                    dictionary2.setObject(allDict3.objectAtIndex(i), forKey: (dict2Contents.objectAtIndex(i) as! String) )
+                for (index, allDict3Value) in allDict3.enumerate(){
+                    dictionary2.setObject(allDict3Value, forKey: dict2Contents.objectAtIndex(index) as! String)
                 }
                 halfWay = true
             }
