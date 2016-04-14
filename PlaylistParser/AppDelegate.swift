@@ -188,4 +188,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSXMLParserDelegate{
             }
         }
     }
+    
+    func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
+        return true
+    }
 }
